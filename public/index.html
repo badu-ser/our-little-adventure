@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#fff0f5"><meta name="description" content="A tiny co-op love adventure made with love.">
+  <title>Our Little Adventure 💗</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>♡</span><span>✦</span><span>✧</span></div>
+  <main class="app">
+    <header class="top"><div class="brand-mark">♡</div><div><p class="eyebrow">A LITTLE WORLD FOR TWO</p><h1>Our Little Adventure</h1></div><div class="online-pill"><i></i><span id="connectionText">Not connected</span></div></header>
+    <section id="lobby" class="panel lobby">
+      <div class="hero-art"><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div><div class="sun">☀</div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="hero-heart">♥</div><div class="hero-person one">☺</div><div class="hero-person two">☺</div></div>
+      <div class="lobby-copy"><span class="tag">MADE JUST FOR YOU TWO</span><h2>Two players.<br><em>One little world.</em></h2><p>Jump, collect hearts, and meet at the end of the rainbow. A tiny adventure for two people who make distance feel smaller. 💗</p>
+        <div class="form-grid"><label>Your display name<input id="playerName" maxlength="22" placeholder="e.g. Badusha" value="Badusha"></label><label>Room code<input id="roomCode" maxlength="8" placeholder="e.g. AKSHAYA" value="AKSHAYA" autocapitalize="characters"></label></div>
+        <div class="lobby-actions"><button id="joinBtn" class="primary">Join our world <span>♡</span></button><button id="randomBtn" class="secondary">Create a new room</button></div><p class="hint">Share the same room code with each other. Only two players can join a room.</p><p id="lobbyError" class="error" role="status"></p>
+      </div>
+    </section>
+    <section id="gameScreen" class="game-layout hidden">
+      <div class="game-toolbar panel"><div><span class="tag">ROOM <b id="roomLabel">—</b></span><div class="players-line"><span class="avatar peach">☺</span><span id="playerOneLabel">Player 1</span><span class="heart-separator">♥</span><span class="avatar lilac">☺</span><span id="playerTwoLabel">Waiting for player 2…</span></div></div><div class="toolbar-right"><div class="score"><span>♡</span><strong id="heartCount">0 / 8</strong></div><button id="restartBtn" class="icon-button" title="Restart game" aria-label="Restart game">↻</button><button id="leaveBtn" class="icon-button" title="Leave room" aria-label="Leave room">↗</button></div></div>
+      <div class="canvas-wrap panel"><canvas id="game" width="960" height="430" aria-label="Romantic two-player platform game"></canvas><div id="waitingBanner" class="waiting-banner">Waiting for your favourite person to join… 💌</div><div id="winOverlay" class="win-overlay hidden"><div class="win-card"><div class="big-heart">♥</div><p class="eyebrow">LEVEL COMPLETE</p><h2>We found all the love. 💗</h2><p>Every heart brought us closer. No distance can change that.</p><p class="personal-message" id="finalMessage">Akshaya, you make my world brighter. I love you! ♡</p><button id="playAgainBtn" class="primary">Play again ↻</button></div></div></div>
+      <div class="controls-row"><div class="control-help"><span class="keycap">←</span><span class="keycap">→</span> Move <span class="keycap">Space</span> Jump <span class="mobile-note">Use the buttons on your screen to move.</span></div><div class="control-buttons"><button class="touch-btn" data-control="left" aria-label="Move left">←</button><button class="touch-btn" data-control="right" aria-label="Move right">→</button><button class="touch-btn jump" data-control="jump" aria-label="Jump">↑ <small>JUMP</small></button></div></div>
+      <section class="bottom-grid"><div class="panel note-panel"><div class="note-icon">✉</div><div><h3>Little note for you</h3><p id="noteText">Even when we're far apart, we're in the same little adventure.</p></div><button id="newNoteBtn" class="text-button">Another note ↗</button></div><div class="panel chat-panel"><h3>Send a tiny message 💬</h3><form id="chatForm"><input id="chatInput" maxlength="120" placeholder="Say something sweet…" autocomplete="off"><button class="send-btn" aria-label="Send message">➤</button></form><div id="chatMessages" class="chat-messages" aria-live="polite"></div></div></section>
+    </section>
+    <footer>Built with ♡ and a little bit of code <span>•</span> Made for Akshaya</footer>
+  </main>
+  <script src="/game.js"></script>
+</body></html>
